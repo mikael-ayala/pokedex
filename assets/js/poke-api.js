@@ -8,6 +8,15 @@ function convertPokemonToModel(pokemon) {
     pokemonModel.types = pokemon.types
     pokemonModel.type = pokemonModel.types[0].type.name
     pokemonModel.image = pokemon.sprites.other.dream_world.front_default
+    pokemonModel.height = pokemon.height
+    pokemonModel.weight = pokemon.weight
+    pokemonModel.abilities = pokemon.abilities
+    pokemonModel.hp = pokemon.stats[0].base_stat
+    pokemonModel.attack = pokemon.stats[1].base_stat
+    pokemonModel.defense = pokemon.stats[2].base_stat
+    pokemonModel.special_attack = pokemon.stats[3].base_stat
+    pokemonModel.special_defense = pokemon.stats[4].base_stat
+    pokemonModel.speed = pokemon.stats[5].base_stat
 
     return pokemonModel
 }
